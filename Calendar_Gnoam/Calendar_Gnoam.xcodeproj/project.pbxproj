@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC0C91D02BD53B3000D9F753 /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0C91CF2BD53B3000D9F753 /* CalendarModel.swift */; };
+		CC0C91D22BD5414A00D9F753 /* MonthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0C91D12BD5414A00D9F753 /* MonthModel.swift */; };
+		CC0C91D42BD5415E00D9F753 /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0C91D32BD5415E00D9F753 /* DayModel.swift */; };
 		CC74C8AC2BD22B7800054B7E /* DateFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC74C8AB2BD22B7800054B7E /* DateFormatter+.swift */; };
 		CC74C8AE2BD2373800054B7E /* CalendarCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC74C8AD2BD2373800054B7E /* CalendarCellView.swift */; };
+		CC860DFC2BD3AAE1003E1873 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC860DFB2BD3AAE1003E1873 /* Date.swift */; };
+		CC860DFE2BD3AB3C003E1873 /* Calendar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC860DFD2BD3AB3C003E1873 /* Calendar+.swift */; };
 		CC972C652BCF553D007F3C9B /* Calendar_GnoamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC972C642BCF553D007F3C9B /* Calendar_GnoamApp.swift */; };
 		CC972C672BCF553D007F3C9B /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC972C662BCF553D007F3C9B /* CalendarView.swift */; };
 		CC972C692BCF553E007F3C9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC972C682BCF553E007F3C9B /* Assets.xcassets */; };
@@ -16,8 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC0C91CF2BD53B3000D9F753 /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
+		CC0C91D12BD5414A00D9F753 /* MonthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthModel.swift; sourceTree = "<group>"; };
+		CC0C91D32BD5415E00D9F753 /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
 		CC74C8AB2BD22B7800054B7E /* DateFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+.swift"; sourceTree = "<group>"; };
 		CC74C8AD2BD2373800054B7E /* CalendarCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCellView.swift; sourceTree = "<group>"; };
+		CC860DFB2BD3AAE1003E1873 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		CC860DFD2BD3AB3C003E1873 /* Calendar+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+.swift"; sourceTree = "<group>"; };
 		CC972C612BCF553D007F3C9B /* Calendar_Gnoam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar_Gnoam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC972C642BCF553D007F3C9B /* Calendar_GnoamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar_GnoamApp.swift; sourceTree = "<group>"; };
 		CC972C662BCF553D007F3C9B /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -36,10 +46,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC0C91CE2BD53B1300D9F753 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC0C91CF2BD53B3000D9F753 /* CalendarModel.swift */,
+				CC0C91D12BD5414A00D9F753 /* MonthModel.swift */,
+				CC0C91D32BD5415E00D9F753 /* DayModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		CC74C8AA2BD22B3900054B7E /* Global */ = {
 			isa = PBXGroup;
 			children = (
 				CC74C8AB2BD22B7800054B7E /* DateFormatter+.swift */,
+				CC860DFB2BD3AAE1003E1873 /* Date.swift */,
+				CC860DFD2BD3AB3C003E1873 /* Calendar+.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -72,6 +94,7 @@
 		CC972C632BCF553D007F3C9B /* Calendar_Gnoam */ = {
 			isa = PBXGroup;
 			children = (
+				CC0C91CE2BD53B1300D9F753 /* Model */,
 				CC74C8AF2BD2375D00054B7E /* Scene */,
 				CC74C8AA2BD22B3900054B7E /* Global */,
 				CC972C642BCF553D007F3C9B /* Calendar_GnoamApp.swift */,
@@ -159,10 +182,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC0C91D02BD53B3000D9F753 /* CalendarModel.swift in Sources */,
 				CC74C8AC2BD22B7800054B7E /* DateFormatter+.swift in Sources */,
+				CC0C91D22BD5414A00D9F753 /* MonthModel.swift in Sources */,
+				CC0C91D42BD5415E00D9F753 /* DayModel.swift in Sources */,
+				CC860DFC2BD3AAE1003E1873 /* Date.swift in Sources */,
 				CC972C672BCF553D007F3C9B /* CalendarView.swift in Sources */,
 				CC74C8AE2BD2373800054B7E /* CalendarCellView.swift in Sources */,
 				CC972C652BCF553D007F3C9B /* Calendar_GnoamApp.swift in Sources */,
+				CC860DFE2BD3AB3C003E1873 /* Calendar+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
