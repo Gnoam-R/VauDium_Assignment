@@ -10,7 +10,6 @@ import SwiftUI
 struct CalendarView: View {
     @State var month: Date = Date()
     @State var offset: CGSize = CGSize()
-    @State var clickedDates: Set<Date> = []
     
     var body: some View {
         
@@ -20,7 +19,6 @@ struct CalendarView: View {
                 LazyVStack {
 //                    ForEach(calendarModel.)
                 }
-//                calendarGridView
             }
         }
         .gesture(
@@ -55,40 +53,6 @@ struct CalendarView: View {
             .padding(.bottom, 5)
         }
     }
-    
-//    private var calendarGridView: some View {
-//        let daysInMonth: Int = numberOfDays(in: month)
-//        let firstWeekday: Int = firstWeekdayOfMonth(in: month) - 1
-//        let calenderColumns = Array(repeating: GridItem(), count: 7)
-//        
-//        return VStack {
-//            LazyVGrid(columns: calenderColumns) {
-//                
-//                ForEach(0 ..< daysInMonth + firstWeekday, id: \.self) { index in
-//                    if index < firstWeekday {
-//                        RoundedRectangle(cornerRadius: 5)
-//                            .foregroundColor(Color.red)
-//                    } else {
-//                        let date = getDate(for: index - firstWeekday)
-//                        let day = index - firstWeekday + 1
-//                        let clicked = clickedDates.contains(date)
-//                        let calendarCellView = DayView(day: day, clicked: clicked)
-//                        
-//                        calendarCellView
-//                            .onTapGesture {
-//                                if clicked {
-//                                    clickedDates.remove(date)
-//                                } else {
-//                                    clickedDates.insert(date)
-//                                }
-//                            }
-//                    }
-//                    
-//                }
-//                
-//            }
-//        }
-//    }
 }
 
 
