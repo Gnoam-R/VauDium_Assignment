@@ -15,6 +15,6 @@ struct DayModel: Identifiable {
     
     init(_ date: Date?) {
         self.date = date
-//        self.hasEvent = date?.day().isMultiple(of: 5) ?? false
+        self.hasEvent = date?.day().isMultiple(of: 5) ?? false
     }    
 }
