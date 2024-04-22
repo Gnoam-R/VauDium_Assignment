@@ -32,3 +32,10 @@ struct CalendarCellView: View {
     }
   }
 }
+
+
+#Preview {
+    VStack {
+        CalendarCellView(day: 1, clicked: true)
+    }
+}
