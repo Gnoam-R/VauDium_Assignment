@@ -21,6 +21,7 @@
 		CC972C672BCF553D007F3C9B /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC972C662BCF553D007F3C9B /* CalendarView.swift */; };
 		CC972C692BCF553E007F3C9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC972C682BCF553E007F3C9B /* Assets.xcassets */; };
 		CC972C6C2BCF553E007F3C9B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC972C6B2BCF553E007F3C9B /* Preview Assets.xcassets */; };
+		CCF6046E2BD744E300757B08 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF6046D2BD744E300757B08 /* EventView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		CC972C662BCF553D007F3C9B /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		CC972C682BCF553E007F3C9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC972C6B2BCF553E007F3C9B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CCF6046D2BD744E300757B08 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				CC972C662BCF553D007F3C9B /* CalendarView.swift */,
 				CC74C8AD2BD2373800054B7E /* DayView.swift */,
 				CC6E5E502BD6356F003C10D5 /* MonthView.swift */,
+				CCF6046D2BD744E300757B08 /* EventView.swift */,
 				CC6E5E522BD6379F003C10D5 /* HStackWithPadding.swift */,
 			);
 			path = Scene;
@@ -193,6 +196,7 @@
 			files = (
 				CC6E5E512BD6356F003C10D5 /* MonthView.swift in Sources */,
 				CC6E5E4F2BD5F76E003C10D5 /* Utility.swift in Sources */,
+				CCF6046E2BD744E300757B08 /* EventView.swift in Sources */,
 				CC0C91D02BD53B3000D9F753 /* CalendarModel.swift in Sources */,
 				CC74C8AC2BD22B7800054B7E /* DateFormatter+.swift in Sources */,
 				CC0C91D22BD5414A00D9F753 /* MonthModel.swift in Sources */,

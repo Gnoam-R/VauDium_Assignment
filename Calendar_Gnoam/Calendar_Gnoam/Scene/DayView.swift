@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DayView: View {
     var dayModel: DayModel
+    let messages = ["MNG", "DAY", "EVN", "NGT"]
     
     var body: some View {
         VStack(
@@ -33,57 +34,13 @@ struct DayView: View {
                         .frame(width: 35, height: 35, alignment: .center)
                     )
                 
-                Text("MNG")
-                    .padding(.vertical, 2)
-                    .padding(.horizontal, 8)
-                    .font(.system(size: 8))
-                    .fontWeight(
-                        isToday ? Font.Weight.bold : Font.Weight.regular
+                ForEach(messages, id: \.self) { msg in
+                    EventView(
+                        msg: msg,
+                        isToday: isToday,
+                        foregroundColor: foregroundColor
                     )
-                    .foregroundStyle(foregroundColor)
-                    .background(Rectangle()
-                        .fill( isToday ? Color.gray : Color.white )
-//                        .frame(width: 35, height: 35, alignment: .center)
-                    )
-                
-                Text("DAY")
-                    .padding(.vertical, 2)
-                    .padding(.horizontal, 8)
-                    .font(.system(size: 8))
-                    .fontWeight(
-                        isToday ? Font.Weight.bold : Font.Weight.regular
-                    )
-                    .foregroundStyle(foregroundColor)
-                    .background(Rectangle()
-                        .fill( isToday ? Color.gray : Color.white )
-//                        .frame(width: 35, height: 35, alignment: .center)
-                    )
-                
-                Text("EVN")
-                    .padding(.vertical, 2)
-                    .padding(.horizontal, 8)
-                    .font(.system(size: 8))
-                    .fontWeight(
-                        isToday ? Font.Weight.bold : Font.Weight.regular
-                    )
-                    .foregroundStyle(foregroundColor)
-                    .background(Rectangle()
-                        .fill( isToday ? Color.gray : Color.white )
-//                        .frame(width: 35, height: 35, alignment: .center)
-                    )
-                
-                Text("NGT")
-                    .padding(.vertical, 2)
-                    .padding(.horizontal, 8)
-                    .font(.system(size: 8))
-                    .fontWeight(
-                        isToday ? Font.Weight.bold : Font.Weight.regular
-                    )
-                    .foregroundStyle(foregroundColor)
-                    .background(Rectangle()
-                        .fill( isToday ? Color.gray : Color.white )
-//                        .frame(width: 35, height: 35, alignment: .center)
-                    )
+                }
                 
                 if (hasEvent) {
                     Circle()
