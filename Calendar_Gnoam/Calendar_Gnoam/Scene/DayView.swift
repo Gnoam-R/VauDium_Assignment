@@ -34,18 +34,15 @@ struct DayView: View {
                         .frame(width: 35, height: 35, alignment: .center)
                     )
                 
-                ForEach(messages, id: \.self) { msg in
-                    EventView(
-                        msg: msg,
-                        isToday: isToday,
-                        foregroundColor: foregroundColor
-                    )
-                }
-                
                 if (hasEvent) {
-                    Circle()
-                        .fill(Color(UIColor.gray))
-                        .frame(width: 8, height: 8)
+                    
+                    ForEach(messages, id: \.self) { msg in
+                        EventView(
+                            msg: msg,
+                            isToday: isToday,
+                            foregroundColor: foregroundColor
+                        )
+                    }
                 }
             }
             
