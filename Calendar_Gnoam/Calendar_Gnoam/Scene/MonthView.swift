@@ -9,9 +9,7 @@ import SwiftUI
 
 struct MonthView: View {
     var monthModel: MonthModel
-    
     @State var leadingPadding: CGFloat?
-    
     
     var body: some View {
         let coordinateSpaceName: String = "monthViewVStack"
@@ -73,36 +71,12 @@ struct MonthView: View {
         .coordinateSpace(name: coordinateSpaceName)
 
     }
-    
 }
-
-
-
-
-
-
-
-
 
 #Preview {
     VStack {
         MonthView(monthModel: MonthModel(Date().firstDayOfMonth()))
             .background(Color.blue)
-//        HStackWithPadding {
-//            Text("hey")
-//        }
-        
-        
-//        MonthView(monthMoel: MonthModel( Date().firstDayOfMonth().plusMonth().plusMonth()))
     }
-//        .background(Color.blue)
-//        DayView(isSelected: false, hasEvents: true, date: 5)
-//            .background(Color.purple)
-//
-//        DayView(isSelected: true, hasEvents: true, date: 5)
-//            .background(Color.purple)
-
-//    }
-
 }
 

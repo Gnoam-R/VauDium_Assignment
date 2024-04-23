@@ -14,7 +14,6 @@ class CalendarModel: ObservableObject {
         let today = Date()
         let firstDayOfCurrentMonth = today.firstDayOfMonth()
         
-        /// 이번 달 기준으로 5달 전을 설정
         var firstDayOfMonth = firstDayOfCurrentMonth.minusMonth(5)
         
         var monthList: [MonthModel] = [MonthModel(firstDayOfMonth)]

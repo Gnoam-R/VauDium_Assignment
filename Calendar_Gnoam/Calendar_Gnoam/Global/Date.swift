@@ -15,14 +15,12 @@ extension Date {
         return Int(dateFormatter.string(from: self))!
     }
     
-    
     // get month part of a date (Int)
     func month() -> Int {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM"
         return Int(dateFormatter.string(from: self))!
     }
-    
     
     // get year part of a date (Int)
     func year() -> Int {
@@ -31,13 +29,11 @@ extension Date {
         return Int(dateFormatter.string(from: self))!
     }
     
-    
     // get localized month string of a date (String)
     func localizedMonthString() -> String {
         let calendar = Calendar.current
         return calendar.shortStandaloneMonthSymbols[self.month() - 1]
     }
-    
     
     // get localized Year Month string of a date (String)
     func yearMonthString() -> String {
@@ -46,7 +42,6 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
-    
     // get weekday of a date (Int)
     // 0: Sunday
     func weekDay() -> Int {
@@ -54,7 +49,6 @@ extension Date {
         let components = calendar.dateComponents([.weekday], from: self)
         return components.weekday! - 1
     }
-
     
     // get the number of days in the month of a date (Int)
     func daysInMonth() -> Int {
@@ -62,7 +56,6 @@ extension Date {
         let range = calendar.range(of: .day, in: .month, for: self)!
         return range.count
     }
-    
     
     // get the date of the first day in the month of a date (Date)
     func firstDayOfMonth() -> Date {
@@ -72,13 +65,11 @@ extension Date {
         return calendar.date(from: components)!
     }
     
-    
     // add days to current date (Date)
     func plusDate(_ count: Int = 1) -> Date {
         let calendar = Calendar.current
         return calendar.date(byAdding: .day, value: count, to: self)!
     }
-    
     
     // minus days from current date (Date)
     func minusDate(_ count: Int = 1) -> Date {
@@ -86,20 +77,17 @@ extension Date {
         return calendar.date(byAdding: .day, value: -count, to: self)!
     }
     
-    
     // add months from current date (Date)
     func plusMonth(_ count: Int = 1) -> Date {
         let calendar = Calendar.current
         return calendar.date(byAdding: .month, value: count, to: self)!
     }
     
-    
     // minus months from current date (Date)
     func minusMonth(_ count: Int = 1) -> Date {
         let calendar = Calendar.current
         return calendar.date(byAdding: .month, value: -count, to: self)!
     }
-
     
     // is the date today (Bool)
     func isToday() -> Bool {
@@ -115,7 +103,6 @@ extension Date {
         let weekday = self.weekDay()
         return ((weekday == 0 ) || (weekday == 6))
     }
-    
     
     // is the date in the same month as today (Bool)
     func isCurrentMonth() -> Bool {

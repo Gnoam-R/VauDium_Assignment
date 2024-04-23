@@ -35,7 +35,6 @@ struct DayView: View {
                     )
                 
                 if (hasEvent) {
-                    
                     ForEach(messages, id: \.self) { msg in
                         EventView(
                             msg: msg,
@@ -45,7 +44,6 @@ struct DayView: View {
                     }
                 }
             }
-            
             
         }
         .frame(width: 40, height: 120, alignment: .top)

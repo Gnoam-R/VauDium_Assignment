@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HStackWithPadding<Content>: View where Content: View  {
-
     var leadingPadding: CGFloat?
     var trailingPadding: CGFloat?
 
@@ -20,25 +19,19 @@ struct HStackWithPadding<Content>: View where Content: View  {
         ) {
             Spacer()
                 .frame(width: leadingPadding ?? 0, height: 10, alignment: .center)
-//                .background(Color.black)
-            
+                
             content
                 .frame(maxWidth: .infinity, alignment: .center)
 
             Spacer()
                 .frame(width: trailingPadding ?? 0, height: 10, alignment: .center)
-//                .background(Color.black)
-
         }
     }
 }
 
-//#Preview {
-//    HStackWithPadding(leadingPadding: 10,
-//                      trailingPadding: 10){
-//        
-//    }
-//}
-
-
-
+#Preview {
+    HStackWithPadding(leadingPadding: 10,
+                      trailingPadding: 10){
+        
+    }
+}
