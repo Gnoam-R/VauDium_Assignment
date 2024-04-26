@@ -16,7 +16,39 @@ struct CalendarView: View {
     @State var showMonthLabel: Bool = false
     @State var viewInitialized: Bool = false
     
+    @State private var selectedItem: Int = 0 // 0번째 탭이 기본적으로 선택됨
+    
     var body: some View {
+        TabView(selection: $selectedItem) {
+            calendarView
+                .tabItem {
+                    Image(selectedItem == 0 ? "CalendarEnableIcon" : "CalendarDisableIcon")
+                    Text("Calendar")
+                }
+                .tag(0)
+            Text("Check")
+                .tabItem {
+                    Image(selectedItem == 1 ? "CheckEnableIcon" : "CheckDisableIcon")
+                    Text("Check")
+                }
+                .tag(1)
+            Text("Event")
+                .tabItem {
+                    Image(selectedItem == 2 ? "EventEnableIcon" : "EventDisableIcon")
+                    Text("Event")
+                }
+                .tag(2)
+            Text("Alarm")
+                .tabItem {
+                    Image(selectedItem == 3 ? "AlarmEnableIcon" : "AlarmDisableIcon")
+                    Text("Alarm")
+                }
+                .tag(3)
+        }
+        .font(.headline)
+    }
+    // MARK: - Calendar 뷰
+    private var calendarView: some View {
         VStack(
             alignment: .center,
             spacing: 0
@@ -40,8 +72,7 @@ struct CalendarView: View {
                 }
         )
     }
-    
-    // MARK: - 헤더 뷰
+    // MARK: - header 뷰
     private var headerView: some View {
         VStack {
             Text(month, formatter: DateFormatter.MMMMYYYY)
@@ -58,7 +89,7 @@ struct CalendarView: View {
         }
     }
     
-    // MARK: - 캘린더 뷰
+    // MARK: - MonthCell 뷰
     private var monthView: some View {
         ZStack(
             alignment: .top
@@ -116,10 +147,10 @@ struct CalendarView: View {
                     }
                 }
             }
-
+            
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-
+        
     }
 }
 
