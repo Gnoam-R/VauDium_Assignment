@@ -21,6 +21,7 @@
 		CC972C672BCF553D007F3C9B /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC972C662BCF553D007F3C9B /* CalendarView.swift */; };
 		CC972C692BCF553E007F3C9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC972C682BCF553E007F3C9B /* Assets.xcassets */; };
 		CC972C6C2BCF553E007F3C9B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC972C6B2BCF553E007F3C9B /* Preview Assets.xcassets */; };
+		CCEBD0A32BDF316A00049D26 /* CalendarTabViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEBD0A22BDF316A00049D26 /* CalendarTabViewItem.swift */; };
 		CCF6046E2BD744E300757B08 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF6046D2BD744E300757B08 /* EventView.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		CC972C662BCF553D007F3C9B /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		CC972C682BCF553E007F3C9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC972C6B2BCF553E007F3C9B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CCEBD0A22BDF316A00049D26 /* CalendarTabViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTabViewItem.swift; sourceTree = "<group>"; };
 		CCF6046D2BD744E300757B08 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +63,7 @@
 				CC0C91D12BD5414A00D9F753 /* MonthModel.swift */,
 				CC0C91D32BD5415E00D9F753 /* DayModel.swift */,
 				CC6E5E4E2BD5F76E003C10D5 /* Utility.swift */,
+				CCEBD0A22BDF316A00049D26 /* CalendarTabViewItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			files = (
 				CC6E5E512BD6356F003C10D5 /* MonthView.swift in Sources */,
 				CC6E5E4F2BD5F76E003C10D5 /* Utility.swift in Sources */,
+				CCEBD0A32BDF316A00049D26 /* CalendarTabViewItem.swift in Sources */,
 				CCF6046E2BD744E300757B08 /* EventView.swift in Sources */,
 				CC0C91D02BD53B3000D9F753 /* CalendarModel.swift in Sources */,
 				CC74C8AC2BD22B7800054B7E /* DateFormatter+.swift in Sources */,

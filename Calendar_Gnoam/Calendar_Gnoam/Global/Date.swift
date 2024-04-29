@@ -109,6 +109,5 @@ extension Date {
         let today = Date()
         return (today.year() == self.year()) && (today.month() == self.month())
     }
-    
 }
 

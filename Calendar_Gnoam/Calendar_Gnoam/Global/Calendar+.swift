@@ -9,6 +9,14 @@ import Foundation
 
 // MARK: - Static 프로퍼티
 extension CalendarView {
+    static let weekdaySymbol: [String] = {
+        let symbol = Calendar.current.veryShortWeekdaySymbols
+        let modifiedWeekdaySymbols = symbol.map {
+            $0.uppercased()
+        }
+        return modifiedWeekdaySymbols
+    }()
+    
     static let weekdaySymbols: [String] = {
         let symbol = Calendar.current.shortStandaloneWeekdaySymbols
         let modifiedWeekdaySymbols = symbol.map {

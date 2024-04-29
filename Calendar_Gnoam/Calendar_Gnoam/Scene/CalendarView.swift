@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+
 struct CalendarView: View {
     @State var month: Date = Date()
     @State var offset: CGSize = CGSize()
@@ -22,31 +24,32 @@ struct CalendarView: View {
         TabView(selection: $selectedItem) {
             calendarView
                 .tabItem {
-                    Image(selectedItem == 0 ? "CalendarEnableIcon" : "CalendarDisableIcon")
-                    Text("Calendar")
+                    Image(selectedItem == 0 ? CalendarTabViewItem.calendar.iconEnable : CalendarTabViewItem.calendar.iconDisable)
+                    Text(CalendarTabViewItem.calendar.rawValue)
                 }
                 .tag(0)
             Text("Check")
                 .tabItem {
-                    Image(selectedItem == 1 ? "CheckEnableIcon" : "CheckDisableIcon")
-                    Text("Check")
+                    Image(selectedItem == 1 ? CalendarTabViewItem.check.iconEnable : CalendarTabViewItem.check.iconDisable)
+                    Text(CalendarTabViewItem.check.rawValue)
                 }
                 .tag(1)
             Text("Event")
                 .tabItem {
-                    Image(selectedItem == 2 ? "EventEnableIcon" : "EventDisableIcon")
-                    Text("Event")
+                    Image(selectedItem == 2 ? CalendarTabViewItem.event.iconEnable : CalendarTabViewItem.event.iconDisable)
+                    Text(CalendarTabViewItem.event.rawValue)
                 }
                 .tag(2)
             Text("Alarm")
                 .tabItem {
-                    Image(selectedItem == 3 ? "AlarmEnableIcon" : "AlarmDisableIcon")
-                    Text("Alarm")
+                    Image(selectedItem == 3 ? CalendarTabViewItem.alarm.iconEnable : CalendarTabViewItem.alarm.iconDisable)
+                    Text(CalendarTabViewItem.calendar.rawValue)
                 }
                 .tag(3)
         }
         .font(.headline)
     }
+    
     // MARK: - Calendar 뷰
     private var calendarView: some View {
         VStack(
@@ -72,6 +75,7 @@ struct CalendarView: View {
                 }
         )
     }
+    
     // MARK: - header 뷰
     private var headerView: some View {
         VStack {
@@ -150,10 +154,8 @@ struct CalendarView: View {
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-        
     }
 }
-
 
 #Preview {
     CalendarView()
