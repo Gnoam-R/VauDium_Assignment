@@ -18,14 +18,16 @@ struct CalendarView: View {
     @State var showMonthLabel: Bool = false
     @State var viewInitialized: Bool = false
     
-    @State private var selectedItem: Int = 0 // 0번째 탭이 기본적으로 선택됨
+    @State private var selectedItem: Int = 0
     
     var body: some View {
         TabView(selection: $selectedItem) {
             calendarView
                 .tabItem {
                     Image(selectedItem == 0 ? CalendarTabViewItem.calendar.iconEnable : CalendarTabViewItem.calendar.iconDisable)
+                        
                     Text(CalendarTabViewItem.calendar.rawValue)
+                        
                 }
                 .tag(0)
             Text("Check")
@@ -48,6 +50,7 @@ struct CalendarView: View {
                 .tag(3)
         }
         .font(.headline)
+        
     }
     
     // MARK: - Calendar 뷰
@@ -65,7 +68,6 @@ struct CalendarView: View {
                     self.offset = gesture.translation
                 }
                 .onEnded { gesture in
-                    print("check")
                     if gesture.translation.width < -100 {
                         changeMonth(by: 1)
                     } else if gesture.translation.width > 100 {
@@ -74,14 +76,35 @@ struct CalendarView: View {
                     self.offset = CGSize()
                 }
         )
+        
     }
     
     // MARK: - header 뷰
     private var headerView: some View {
         VStack {
-            Text(month, formatter: DateFormatter.MMMMYYYY)
-                .font(.title)
-                .padding(.bottom)
+            ZStack {
+                HStack (alignment: .center) {
+                    Spacer()
+                    Text(month, formatter: DateFormatter.MMMMYYYY)
+                        .font(.title)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        
+                    Spacer()
+                }
+                .padding()
+                
+                HStack {
+                    Spacer()
+                    Button {
+                        print("Hitted2") // 어떻게 바꿀 것인지
+                    } label: {
+                        Image(systemName: "ellipsis.circle") // 어떻게 꾸밀 것인지
+                            .foregroundColor(.black)
+                
+                    }
+                }
+                .padding(.trailing)
+            }
             
             HStack {
                 ForEach(Self.weekdaySymbols, id: \.self) { symbol in
@@ -91,6 +114,7 @@ struct CalendarView: View {
             }
             .padding(.bottom, 5)
         }
+        
     }
     
     // MARK: - MonthCell 뷰
