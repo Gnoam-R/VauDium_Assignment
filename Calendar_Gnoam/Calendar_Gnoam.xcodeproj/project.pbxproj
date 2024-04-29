@@ -22,6 +22,7 @@
 		CC972C692BCF553E007F3C9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC972C682BCF553E007F3C9B /* Assets.xcassets */; };
 		CC972C6C2BCF553E007F3C9B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC972C6B2BCF553E007F3C9B /* Preview Assets.xcassets */; };
 		CCEBD0A32BDF316A00049D26 /* CalendarTabViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEBD0A22BDF316A00049D26 /* CalendarTabViewItem.swift */; };
+		CCEBD0A52BDFD04200049D26 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEBD0A42BDFD04200049D26 /* MainView.swift */; };
 		CCF6046E2BD744E300757B08 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF6046D2BD744E300757B08 /* EventView.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		CC972C682BCF553E007F3C9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC972C6B2BCF553E007F3C9B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CCEBD0A22BDF316A00049D26 /* CalendarTabViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTabViewItem.swift; sourceTree = "<group>"; };
+		CCEBD0A42BDFD04200049D26 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CCF6046D2BD744E300757B08 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 		CC74C8AF2BD2375D00054B7E /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				CCEBD0A42BDFD04200049D26 /* MainView.swift */,
 				CC972C662BCF553D007F3C9B /* CalendarView.swift */,
 				CC74C8AD2BD2373800054B7E /* DayView.swift */,
 				CC6E5E502BD6356F003C10D5 /* MonthView.swift */,
@@ -210,6 +213,7 @@
 				CC74C8AE2BD2373800054B7E /* DayView.swift in Sources */,
 				CC972C652BCF553D007F3C9B /* Calendar_GnoamApp.swift in Sources */,
 				CC860DFE2BD3AB3C003E1873 /* Calendar+.swift in Sources */,
+				CCEBD0A52BDFD04200049D26 /* MainView.swift in Sources */,
 				CC6E5E532BD6379F003C10D5 /* HStackWithPadding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

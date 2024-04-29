@@ -49,6 +49,9 @@ struct DayView: View {
         }
         .frame(width: 40, height: 120, alignment: .top)
         .padding(.vertical, 5)
+        .onTapGesture {
+            print()
+        }
     }
 }
 

@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-
+class UserEvent: ObservableObject {
+    @Published var userTapped: Bool = false
+}
 
 struct CalendarView: View {
     @State var month: Date = Date()
@@ -18,43 +20,9 @@ struct CalendarView: View {
     @State var showMonthLabel: Bool = false
     @State var viewInitialized: Bool = false
     
-    @State private var selectedItem: Int = 0
+    @StateObject var userEvent: UserEvent = UserEvent()
     
     var body: some View {
-        TabView(selection: $selectedItem) {
-            calendarView
-                .tabItem {
-                    Image(selectedItem == 0 ? CalendarTabViewItem.calendar.iconEnable : CalendarTabViewItem.calendar.iconDisable)
-                        
-                    Text(CalendarTabViewItem.calendar.rawValue)
-                        
-                }
-                .tag(0)
-            Text("Check")
-                .tabItem {
-                    Image(selectedItem == 1 ? CalendarTabViewItem.check.iconEnable : CalendarTabViewItem.check.iconDisable)
-                    Text(CalendarTabViewItem.check.rawValue)
-                }
-                .tag(1)
-            Text("Event")
-                .tabItem {
-                    Image(selectedItem == 2 ? CalendarTabViewItem.event.iconEnable : CalendarTabViewItem.event.iconDisable)
-                    Text(CalendarTabViewItem.event.rawValue)
-                }
-                .tag(2)
-            Text("Alarm")
-                .tabItem {
-                    Image(selectedItem == 3 ? CalendarTabViewItem.alarm.iconEnable : CalendarTabViewItem.alarm.iconDisable)
-                    Text(CalendarTabViewItem.calendar.rawValue)
-                }
-                .tag(3)
-        }
-        .font(.headline)
-        
-    }
-    
-    // MARK: - Calendar 뷰
-    private var calendarView: some View {
         VStack(
             alignment: .center,
             spacing: 0
@@ -76,7 +44,6 @@ struct CalendarView: View {
                     self.offset = CGSize()
                 }
         )
-        
     }
     
     // MARK: - header 뷰
@@ -96,11 +63,10 @@ struct CalendarView: View {
                 HStack {
                     Spacer()
                     Button {
-                        print("Hitted2") // 어떻게 바꿀 것인지
+                        // add Action
                     } label: {
-                        Image(systemName: "ellipsis.circle") // 어떻게 꾸밀 것인지
+                        Image(systemName: "ellipsis.circle")
                             .foregroundColor(.black)
-                
                     }
                 }
                 .padding(.trailing)
