@@ -2,7 +2,7 @@
 
 <br>
 <div align=center> 
-  <img src="https://github.com/iOS-YouTube-CloneCoding/Youtube_Clone_Gnoam/assets/67363759/b307bcfe-e8ba-4e8f-a60e-ea9c17fdc2c5"> 
+  <img src="https://github.com/Gnoam-R/VauDium_Assignment/assets/67363759/9083cbdc-744a-4b02-af9f-856226b1fd32"> 
 </div>
 <br>
 
