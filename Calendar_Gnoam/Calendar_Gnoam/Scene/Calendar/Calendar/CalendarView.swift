@@ -52,7 +52,7 @@ struct CalendarView: View {
             ZStack {
                 HStack (alignment: .center) {
                     Spacer()
-                    Text(month, formatter: DateFormatter.MMMMYYYY)
+                    Text(month, formatter: DateFormatter.monthAndYear)
                         .font(.title)
                         .frame(maxWidth: .infinity, alignment: .center)
         

@@ -8,7 +8,7 @@
 import Foundation
 
 extension DateFormatter {
-    static let MMMMYYYY: DateFormatter = {
+    static let monthAndYear: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "MMMM yyyy"
         return formatter
