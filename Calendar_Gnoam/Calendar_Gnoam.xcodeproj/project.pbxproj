@@ -15,7 +15,7 @@
 		CC6E5E532BD6379F003C10D5 /* HStackWithPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6E5E522BD6379F003C10D5 /* HStackWithPadding.swift */; };
 		CC74C8AC2BD22B7800054B7E /* DateFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC74C8AB2BD22B7800054B7E /* DateFormatter+.swift */; };
 		CC74C8AE2BD2373800054B7E /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC74C8AD2BD2373800054B7E /* DayView.swift */; };
-		CC860DFC2BD3AAE1003E1873 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC860DFB2BD3AAE1003E1873 /* Date.swift */; };
+		CC860DFC2BD3AAE1003E1873 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC860DFB2BD3AAE1003E1873 /* Date+.swift */; };
 		CC860DFE2BD3AB3C003E1873 /* Calendar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC860DFD2BD3AB3C003E1873 /* Calendar+.swift */; };
 		CC972C652BCF553D007F3C9B /* Calendar_GnoamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC972C642BCF553D007F3C9B /* Calendar_GnoamApp.swift */; };
 		CC972C672BCF553D007F3C9B /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC972C662BCF553D007F3C9B /* CalendarView.swift */; };
@@ -35,7 +35,7 @@
 		CC6E5E522BD6379F003C10D5 /* HStackWithPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HStackWithPadding.swift; sourceTree = "<group>"; };
 		CC74C8AB2BD22B7800054B7E /* DateFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+.swift"; sourceTree = "<group>"; };
 		CC74C8AD2BD2373800054B7E /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
-		CC860DFB2BD3AAE1003E1873 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		CC860DFB2BD3AAE1003E1873 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		CC860DFD2BD3AB3C003E1873 /* Calendar+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+.swift"; sourceTree = "<group>"; };
 		CC972C612BCF553D007F3C9B /* Calendar_Gnoam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar_Gnoam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC972C642BCF553D007F3C9B /* Calendar_GnoamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar_GnoamApp.swift; sourceTree = "<group>"; };
@@ -61,20 +61,72 @@
 		CC0C91CE2BD53B1300D9F753 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CC0C91CF2BD53B3000D9F753 /* CalendarModel.swift */,
-				CC0C91D12BD5414A00D9F753 /* MonthModel.swift */,
-				CC0C91D32BD5415E00D9F753 /* DayModel.swift */,
 				CC6E5E4E2BD5F76E003C10D5 /* Utility.swift */,
-				CCEBD0A22BDF316A00049D26 /* CalendarTabViewItem.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CC4113CE2BE0A78D00DA0D15 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				CC4113D12BE0A7E000DA0D15 /* Calendar */,
+				CC4113D02BE0A7C500DA0D15 /* Day */,
+				CC4113CF2BE0A7A300DA0D15 /* Month */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		CC4113CF2BE0A7A300DA0D15 /* Month */ = {
+			isa = PBXGroup;
+			children = (
+				CC6E5E522BD6379F003C10D5 /* HStackWithPadding.swift */,
+				CC0C91D12BD5414A00D9F753 /* MonthModel.swift */,
+				CC6E5E502BD6356F003C10D5 /* MonthView.swift */,
+			);
+			path = Month;
+			sourceTree = "<group>";
+		};
+		CC4113D02BE0A7C500DA0D15 /* Day */ = {
+			isa = PBXGroup;
+			children = (
+				CCF6046D2BD744E300757B08 /* EventView.swift */,
+				CC0C91D32BD5415E00D9F753 /* DayModel.swift */,
+				CC74C8AD2BD2373800054B7E /* DayView.swift */,
+			);
+			path = Day;
+			sourceTree = "<group>";
+		};
+		CC4113D12BE0A7E000DA0D15 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				CC972C662BCF553D007F3C9B /* CalendarView.swift */,
+				CC0C91CF2BD53B3000D9F753 /* CalendarModel.swift */,
+				CCEBD0A22BDF316A00049D26 /* CalendarTabViewItem.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		CC4113D22BE0A7F300DA0D15 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CCEBD0A42BDFD04200049D26 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CC4113D32BE0A82A00DA0D15 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CC972C642BCF553D007F3C9B /* Calendar_GnoamApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		CC74C8AA2BD22B3900054B7E /* Global */ = {
 			isa = PBXGroup;
 			children = (
 				CC74C8AB2BD22B7800054B7E /* DateFormatter+.swift */,
-				CC860DFB2BD3AAE1003E1873 /* Date.swift */,
+				CC860DFB2BD3AAE1003E1873 /* Date+.swift */,
 				CC860DFD2BD3AB3C003E1873 /* Calendar+.swift */,
 			);
 			path = Global;
@@ -83,12 +135,8 @@
 		CC74C8AF2BD2375D00054B7E /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				CCEBD0A42BDFD04200049D26 /* MainView.swift */,
-				CC972C662BCF553D007F3C9B /* CalendarView.swift */,
-				CC74C8AD2BD2373800054B7E /* DayView.swift */,
-				CC6E5E502BD6356F003C10D5 /* MonthView.swift */,
-				CCF6046D2BD744E300757B08 /* EventView.swift */,
-				CC6E5E522BD6379F003C10D5 /* HStackWithPadding.swift */,
+				CC4113D22BE0A7F300DA0D15 /* Main */,
+				CC4113CE2BE0A78D00DA0D15 /* Calendar */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -112,10 +160,10 @@
 		CC972C632BCF553D007F3C9B /* Calendar_Gnoam */ = {
 			isa = PBXGroup;
 			children = (
+				CC4113D32BE0A82A00DA0D15 /* App */,
 				CC0C91CE2BD53B1300D9F753 /* Model */,
 				CC74C8AF2BD2375D00054B7E /* Scene */,
 				CC74C8AA2BD22B3900054B7E /* Global */,
-				CC972C642BCF553D007F3C9B /* Calendar_GnoamApp.swift */,
 				CC972C682BCF553E007F3C9B /* Assets.xcassets */,
 				CC972C6A2BCF553E007F3C9B /* Preview Content */,
 			);
@@ -208,7 +256,7 @@
 				CC74C8AC2BD22B7800054B7E /* DateFormatter+.swift in Sources */,
 				CC0C91D22BD5414A00D9F753 /* MonthModel.swift in Sources */,
 				CC0C91D42BD5415E00D9F753 /* DayModel.swift in Sources */,
-				CC860DFC2BD3AAE1003E1873 /* Date.swift in Sources */,
+				CC860DFC2BD3AAE1003E1873 /* Date+.swift in Sources */,
 				CC972C672BCF553D007F3C9B /* CalendarView.swift in Sources */,
 				CC74C8AE2BD2373800054B7E /* DayView.swift in Sources */,
 				CC972C652BCF553D007F3C9B /* Calendar_GnoamApp.swift in Sources */,

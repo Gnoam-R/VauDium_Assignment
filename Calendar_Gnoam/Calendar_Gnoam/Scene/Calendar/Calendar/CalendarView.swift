@@ -55,7 +55,7 @@ struct CalendarView: View {
                     Text(month, formatter: DateFormatter.MMMMYYYY)
                         .font(.title)
                         .frame(maxWidth: .infinity, alignment: .center)
-                        
+        
                     Spacer()
                 }
                 .padding()
@@ -63,12 +63,16 @@ struct CalendarView: View {
                 HStack {
                     Spacer()
                     Button {
+                        withAnimation {
+                            
+                        }
                         // add Action
                     } label: {
                         Image(systemName: "ellipsis.circle")
                             .foregroundColor(.black)
                     }
                 }
+                
                 .padding(.trailing)
             }
             
