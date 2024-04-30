@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DayView: View {
+    
     var dayModel: DayModel
     let messages = ["MNG", "DAY", "EVN", "NGT"]
     
@@ -30,7 +31,7 @@ struct DayView: View {
                     )
                     .foregroundStyle(foregroundColor)
                     .background(Circle()
-                        .fill( isToday ? Color.red : Color.white )
+                        .fill( isToday ? Color.purple : Color.white )
                         .frame(width: 35, height: 35, alignment: .center)
                     )
                 
@@ -48,6 +49,9 @@ struct DayView: View {
         }
         .frame(width: 40, height: 120, alignment: .top)
         .padding(.vertical, 5)
+        .onTapGesture {
+            print()
+        }
     }
 }
 
@@ -57,6 +61,5 @@ struct DayView: View {
         DayView(dayModel: DayModel(Date()))
             .background(Color.purple)
     }
-    
 }
 

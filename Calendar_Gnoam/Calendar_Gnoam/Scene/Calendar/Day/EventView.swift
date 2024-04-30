@@ -22,7 +22,7 @@ struct EventView: View {
             )
             .foregroundStyle(foregroundColor)
             .background(Rectangle()
-                .fill( isToday ? Color.gray : Color.white )
+                .fill( isToday ? Color.purple : Color.white )
             )
     }
 }

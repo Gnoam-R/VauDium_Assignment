@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+class UserEvent: ObservableObject {
+    @Published var userTapped: Bool = false
+}
+
 struct CalendarView: View {
     @State var month: Date = Date()
     @State var offset: CGSize = CGSize()
@@ -15,6 +19,8 @@ struct CalendarView: View {
     @State var monthId: MonthModel.ID?
     @State var showMonthLabel: Bool = false
     @State var viewInitialized: Bool = false
+    
+    @StateObject var userEvent: UserEvent = UserEvent()
     
     var body: some View {
         VStack(
@@ -30,7 +36,6 @@ struct CalendarView: View {
                     self.offset = gesture.translation
                 }
                 .onEnded { gesture in
-                    print("check")
                     if gesture.translation.width < -100 {
                         changeMonth(by: 1)
                     } else if gesture.translation.width > 100 {
@@ -41,12 +46,35 @@ struct CalendarView: View {
         )
     }
     
-    // MARK: - 헤더 뷰
+    // MARK: - header 뷰
     private var headerView: some View {
         VStack {
-            Text(month, formatter: DateFormatter.MMMMYYYY)
-                .font(.title)
-                .padding(.bottom)
+            ZStack {
+                HStack (alignment: .center) {
+                    Spacer()
+                    Text(month, formatter: DateFormatter.monthAndYear)
+                        .font(.title)
+                        .frame(maxWidth: .infinity, alignment: .center)
+        
+                    Spacer()
+                }
+                .padding()
+                
+                HStack {
+                    Spacer()
+                    Button {
+                        withAnimation {
+                            
+                        }
+                        // add Action
+                    } label: {
+                        Image(systemName: "ellipsis.circle")
+                            .foregroundColor(.black)
+                    }
+                }
+                
+                .padding(.trailing)
+            }
             
             HStack {
                 ForEach(Self.weekdaySymbols, id: \.self) { symbol in
@@ -56,9 +84,10 @@ struct CalendarView: View {
             }
             .padding(.bottom, 5)
         }
+        
     }
     
-    // MARK: - 캘린더 뷰
+    // MARK: - MonthCell 뷰
     private var monthView: some View {
         ZStack(
             alignment: .top
@@ -116,13 +145,11 @@ struct CalendarView: View {
                     }
                 }
             }
-
+            
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-
     }
 }
-
 
 #Preview {
     CalendarView()

@@ -8,24 +8,13 @@
 import Foundation
 
 class Utility {
-    
-    // A list of very-shortly-named weekdays in this calendar, localized to the Calendar’s locale.
-    // ex: for English in the Gregorian calendar, returns ["S", "M", "T", "W", "T", "F", "S"]
-    static func weekdaySymbols() -> [String] {
-        let calendar = Calendar.current.shortStandaloneWeekdaySymbols
-        let modifiedWeekdaySymbols = calendar.map {
-            $0.uppercased()
-        }
-        return modifiedWeekdaySymbols
-    }
-    
-//    static let weekdaySymbols: [String] = {
-//        let symbol = Calendar.current.shortStandaloneWeekdaySymbols
-//        let modifiedWeekdaySymbols = symbol.map {
+//    static func weekdaySymbols() -> [String] {
+//        let calendar = Calendar.current.shortStandaloneWeekdaySymbols
+//        let modifiedWeekdaySymbols = calendar.map {
 //            $0.uppercased()
 //        }
 //        return modifiedWeekdaySymbols
-//    }()
+//    }
     
     static func dateFromString(month: Int, year: Int, day: Int) -> Date {
         let dateFormatter = DateFormatter()
